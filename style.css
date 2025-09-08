@@ -175,6 +175,13 @@ section {
     margin: auto 0;
 }
 
+.profile-pic-tag {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 200px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
 .section__text {
     align-self: center;
     text-align: center;
@@ -191,6 +198,7 @@ section {
 .section__text__p2 {
     font-size: 1.75rem;
     margin-bottom: 1rem;
+    min-height: 2.7rem;
 }
 
 .title {
@@ -422,3 +430,46 @@ footer {
 footer p {
     text-align: center;
 }
+
+/* Experience Tab Custom Build */
+
+#experience-tab {
+    position: relative;
+}
+
+.details-container-experience-tab {
+    padding: 1.5rem;
+    flex: 1;
+    background: white;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    /* text-align: center; */
+}
+
+.experience-sub-title-custom {
+    /* color: rgb(85, 85, 85); */
+    font-weight: 600;
+    font-size: 1.75rem;
+    margin-bottom: .3rem;
+}
+
+.company-experience-div {
+    display: flex;
+    justify-content: space-between;
+    color: rgb(85, 85, 85);
+    margin-bottom: 2rem;
+}
+
+.years-in-experience-tab {
+    font-size: 1rem;
+}
+
+.typing-text {
+    display: inline-block;
+    width: 25ch;
+    white-space: nowrap;
+    vertical-align: top;
+    border-right: none;
+}
+
