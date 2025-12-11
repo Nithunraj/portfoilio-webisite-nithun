@@ -475,31 +475,51 @@ footer p {
 }
 
 /* Christmas Banner starts*/
-.christmas-banner {
+
+.santa-banner {
   width: 100%;
-  background: #f79c9c; /* red festive bar */
-  color: white;
-  padding: 8px 0;
   overflow: hidden;
-  white-space: nowrap;
-  font-size: 1rem;
-  font-weight: 600;
-  position: relative;
+  background: #ffffff; /* red festive bar */
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
 }
 
-.scroll-text {
-  display: inline-block;
-  padding-left: 100%;
-  color: black;
+/* Wrapper ensures starting outside viewport */
+.scroll-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.scroll-container {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  transform: translateX(100vw); /* Start fully off-screen right */
   animation: scroll-left 12s linear infinite;
 }
 
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+.santa {
+  width: 5%;
+  margin-right: 10px;
+  animation: bounce 1s infinite alternate; /* optional small bounce */
 }
+
+.scroll-text {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Scroll from right (outside viewport) to left (completely out) */
+@keyframes scroll-left {
+  0% { transform: translateX(100vw); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Optional Santa bounce */
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-5px); }
+}
+
 /* Christmas Banner ends*/
