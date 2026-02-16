@@ -15,3 +15,18 @@ var typed = new Typed(".typing-text", {
     showCursor: false,
 });
 // <!-- typed js effect ends -->
+function openModal() {
+    console.log("clicked");
+    document.getElementById("experienceModal").style.display = "block";
+}
+
+function closeModal() {
+    document.getElementById("experienceModal").style.display = "none";
+}
+
+window.onclick = function(event) {
+    const modal = document.getElementById("experienceModal");
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
